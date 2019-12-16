@@ -2,6 +2,7 @@
 ob_start();
 $title = "KoolMKM";
 ?>
+
 <!-- Formulaire d'ajout d'article -->
 <?php if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') : ?>
     <h3>Ajouter un article</h3>
@@ -16,13 +17,14 @@ $title = "KoolMKM";
     </form>
     <br>
 <?php endif; ?>
+
+<!-- Affichage des articles -->
 <div>
-    <!-- Affichage des articles -->
     <?php
     foreach ($myArticles as $article) {
         $date = new DateTime($article->getDate());
         $datenew = $date->format("d/m/Y à H:i");
-        ?>
+    ?>
 
         <div class="heightArticle">
             <h3><?= $article->getTitle() ?></h3>
@@ -40,4 +42,4 @@ $title = "KoolMKM";
 </div>
 
 <?php $content = ob_get_clean();
-require 'view/template.php'; ?>
+                                                                require 'view/template.php'; ?>

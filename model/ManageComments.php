@@ -4,7 +4,7 @@ class ManageComments extends DbConnect
 {
     public function getAllComments($idArticle)
     {
-        $query = "SELECT * FROM comments WHERE id_article = :id";
+        $query = "SELECT * FROM comments WHERE id_article = :id ORDER BY date_comment DESC";
         $result = $this->Connect()->prepare($query);
         $result->execute(["id" => $idArticle]);
         $tab = [];

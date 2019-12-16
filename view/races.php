@@ -1,5 +1,7 @@
 <?php $title = 'Les races jouables';
-ob_start(); ?>
+ob_start();
+?>
+
 <!-- Affichage des cartes -->
 <h3 style="text-align: center"> Races jouables alliés</h3>
 <br>
@@ -65,5 +67,7 @@ ob_start(); ?>
   </div>
 </div>
 
-<?php $content = ob_get_clean();
-require 'template.php'; ?>
+<?php
+$content = ob_get_clean();
+require 'template.php';
+?>

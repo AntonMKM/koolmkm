@@ -3,12 +3,11 @@ $title = "News"; ?>
 
 <!-- Affichage article entier -->
 <div id="article">
-
         <h3> <?= $myArticle->getTitle() ?> </h3>
         <img class="picture2" src="public/img/<?= $myArticle->getImg() ?>">
         <p> <?= $myArticle->getContent() ?> </p>
         <?php $date = new DateTime($myArticle->getDate());
-        $datenews = $date->format("d/m/Y à H:i"); ?>
+                                                $datenews = $date->format("d/m/Y à H:i"); ?>
         <span class="dateAuthor">Posté le <?= $datenews ?> par : <?= $myArticle->getAuthor() ?></span>
 </div>
 <hr>
@@ -20,18 +19,18 @@ $title = "News"; ?>
         </form>
 <?php endif ?>
 <br>
+<!--Commentaires-->
 <h3>Commentaires de l'article</h3>
-
+<br>
 <?php foreach ($myComments as $comment) { ?>
 
         <p><?= $comment->getComment() ?></p>
-        <p>Posté par <?= $comment->getLogin() ?> le
-                <?php $dateC = new DateTime($comment->getDate_comment());
-                        $dateCnews = $dateC->format("d/m/Y H:i"); ?>
-                <?= $dateCnews ?></p>
-        <br>
+        <h6>Posté par <?= $comment->getLogin() ?>
+                le <?php $dateC = new DateTime($comment->getDate_comment());
+                                                                                $dateCnews = $dateC->format("d/m/Y H:i"); ?>
+                <?= $dateCnews ?></h6>
         <hr>
 <?php }
-$content = ob_get_clean();
-require 'template.php';
+                                                                        $content = ob_get_clean();
+                                                                        require 'template.php';
 ?>

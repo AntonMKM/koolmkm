@@ -1,13 +1,14 @@
 <?php
-
 $title = 'L\'histoire';
 ob_start();
 ?>
+
 <h3> Introduction à l'univers de World of Warcraft </h3>
 <br>
-<div #video>
+<div class="video-container">
     <iframe id="introStory" width="560" height="315" src="https://www.youtube.com/embed/aL12LwFDrxw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<br>
 <p>Draenor, le monde natal des Orcs, se meurt. Le sorcier démoniste Gul'dan unifie les tribus orcs au sein d’une Horde et use d’une puissante magie, le Fel (la Gangrène en VQ), afin d’ouvrir un portail vers Azeroth où une petite troupe de guerriers s’infiltre afin d’y réunir assez de prisonniers humains à sacrifier pour faire passer le restant de la Horde. En dépit de ses doutes, le puissant Durotan, chef de la tribu des Loups de Givre, sa femme enceinte Draka emmenée clandestinement et son ami Orgrim font partie du groupe commando.
 </p>
 <p> Durant le passage, Draka se trahit en accouchant du fils de Durotan. Gul'dan aide à la naissance de l’enfant et sacrifie la vie d’une biche afin d’insuffler au nouveau-né moribond la force de vivre.
@@ -33,6 +34,7 @@ ob_start();
     Lothar arrive sur un griffon et tente de récupérer le corps du roi, découvrant la dague de Garona dans la blessure fatale au roi. Capturé, il est contraint par Main-Noire à un duel rituel. Rusé, Lothar tue Main-Noire d’un seul geste. Gul'dan exige des orcs qu’ils tuent Lothar, mais ces derniers sont fidèles aux traditions et honorent le vainqueur en le laissant partir sain et sauf. Furieux qu'on lui désobéisse, Gul'dan décide de le tuer lui-même, mais Garona réussit à le convaincre que s'il agit ainsi, il perdra définitivement le soutien de la Horde pour ne pas respecter leurs traditions. Le shaman orc se résigne donc à laisser Lothar s'en aller.
 
     Aux funérailles du roi, les Elfes et les Nains s’allient à Lothar afin de lutter contre les Orcs. Plus loin, Go'el le fils de Durotan (le futur Thrall) est recueilli par un inconnu. </p>
+
 <?php
 $content = ob_get_clean();
 require 'template.php';
