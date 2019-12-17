@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="public/css/style.css" type="text/css">
 </head>
 
-<body>
+<body class="container">
     <!--barre de navigation-->
     <div class="topnav" id="myTopnav">
         <a href="index.php" class="active">Accueil</a>
@@ -36,18 +36,9 @@
     </div>
     <?php if (isset($_SESSION['login'])) echo 'Bienvenue ' . $_SESSION['login'] ?>
     <br><br>
-
     <?= $content ?>
+
+    <script type="text/javascript" src="public/js/script.js"></script>
 </body>
 
 </html>
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>

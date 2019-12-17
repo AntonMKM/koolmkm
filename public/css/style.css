@@ -1,9 +1,4 @@
-@font-face {
-  font-family: "LifeCraft_Font";
-  src: url("../fonts/LifeCraft_Font.ttf");
-}
 body {
-  /* font-family: "LifeCraft_Font"; */
   height: 100%;
   font-size: large;
   color: burlywood;
@@ -54,8 +49,8 @@ h3 {
 }
 .heightArticle {
   overflow: hidden;
-  /* text-overflow: ellipsis; */
-  height: 50%;
+  text-overflow: ellipsis;
+  height: 300px;
 }
 #introStory {
   float: left;
@@ -68,7 +63,7 @@ nav {
 .picture {
   margin-right: 15px;
   float: left;
-  width: 50%;
+  width: 30%;
 }
 .picture2 {
   display: flex;
@@ -161,4 +156,7 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
+}
+.footer {
+  background-color: #333;
 }
