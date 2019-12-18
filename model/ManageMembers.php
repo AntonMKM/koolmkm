@@ -11,7 +11,6 @@ class ManageMembers extends DbConnect
             'login' => htmlspecialchars($data->getLogin()),
             'pass' => password_hash($data->getPass(), PASSWORD_DEFAULT),
             'email' => htmlspecialchars($data->getEmail())
-
         ]);
     }
     function manageView()

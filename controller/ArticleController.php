@@ -30,7 +30,6 @@ class ArticleController
     function getFullArticle($id)
     {
         $gestion = new ManageArticles();
-        $myArticle = $gestion->oneFullArticle($id);
         if ($myArticle = $gestion->oneFullArticle($id)) {
             $gestion = new ManageComments();
             $myComments = $gestion->getAllComments($id);

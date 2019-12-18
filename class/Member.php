@@ -13,11 +13,11 @@ class Member
 	function __construct(array $data = null)
 	{
 		if ($data) {
-			$this->hydrate($data);
+			$this->init($data);
 		}
 	}
 
-	function hydrate(array $data)
+	function init(array $data)
 	{
 		foreach ($data as $key => $value) {
 			$method = 'set' . ucFirst($key);
