@@ -8,7 +8,7 @@ class Member
 	private $pass;
 	private $email;
 	private $status;
-	// private $sexe;
+
 
 	function __construct(array $data = null)
 	{
