@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 14 déc. 2019 à 15:57
+-- Généré le :  mer. 18 déc. 2019 à 15:51
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
-  `author` varchar(128) NOT NULL,
+  `author` varchar(32) NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `img` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
@@ -58,21 +58,21 @@ DROP TABLE IF EXISTS `comments`;
 CREATE TABLE IF NOT EXISTS `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_article` int(11) NOT NULL,
-  `login` varchar(64) NOT NULL,
+  `login` varchar(32) NOT NULL,
   `comment` text NOT NULL,
   `date_comment` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `fk_article` (`id_article`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `comments`
 --
 
 INSERT INTO `comments` (`id`, `id_article`, `login`, `comment`, `date_comment`) VALUES
-(4, 4, 'Antho', 'Premier commentaire du jour.', '2019-12-14 14:33:14'),
-(5, 4, 'Antho', 'deuxième commentaire', '2019-12-14 15:41:57'),
-(6, 3, 'Antho', 'commentaire', '2019-12-14 15:43:46');
+(6, 4, 'Antho', 'Que la fête commence!', '2019-12-16 12:50:59'),
+(7, 4, 'Leila', 'Très bel article, merci!', '2019-12-16 13:13:42'),
+(8, 4, 'Clément', 'Commentaire', '2019-12-18 10:36:03');
 
 -- --------------------------------------------------------
 
@@ -83,12 +83,12 @@ INSERT INTO `comments` (`id`, `id_article`, `login`, `comment`, `date_comment`) 
 DROP TABLE IF EXISTS `members`;
 CREATE TABLE IF NOT EXISTS `members` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `login` varchar(128) NOT NULL,
+  `login` varchar(32) NOT NULL,
   `pass` varchar(255) NOT NULL,
-  `email` varchar(128) NOT NULL,
+  `email` varchar(64) NOT NULL,
   `status` varchar(16) NOT NULL DEFAULT 'member',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `members`
@@ -96,8 +96,9 @@ CREATE TABLE IF NOT EXISTS `members` (
 
 INSERT INTO `members` (`id`, `login`, `pass`, `email`, `status`) VALUES
 (15, 'Antho', '$2y$10$9W1zbHUgyXvBhqMEeBH9yO4dBo1RkH.yvXtnyxkF/efsf0zU3SNqS', 'yahoo@outlook.fr', 'admin'),
-(20, 'Afpa', '$2y$10$SUr2YGaOaseMGET3HoV7we1STV/Kq3L21L08XLfHtEK1joyOHBYEK', 'afpa@afpa.fr', 'member'),
-(21, 'Clément', '$2y$10$BbryiAxYPnTgkVfeBvJGYe1C76yAI00lme55RsO5A4qLdq9qM6RTq', 'afpa@maisons.fr', 'member');
+(21, 'Leila', '$2y$10$o7/fHoa8WpHP2I/oPrmuAOyeSxCfS.NuO./aqru2H.EZMa5N4lifa', 'aol@wanadoo.fr', 'member'),
+(23, 'Iuliia', '$2y$10$P0IfVkDvTZxfI.xS/n8GG.HGaezNgaKYtqSVWvbATZq98Lur79/aG', 'Boubou@yandex.ru', 'member'),
+(24, 'Clément', '$2y$10$bG5l78ZjPPhxwogkFgeXi.nmTPkESuhziAGH5jJiu4QQXDFtSPB/O', 'google@hotmail.com', 'member');
 
 --
 -- Contraintes pour les tables déchargées

@@ -19,27 +19,27 @@ $title = "KoolMKM";
 <?php endif; ?>
 
 <!-- Affichage des articles -->
-<div>
-    <?php
-    foreach ($myArticles as $article) {
-        $date = new DateTime($article->getDate());
-        $datenew = $date->format("d/m/Y à H:i");
-    ?>
 
-        <div class="heightArticle">
-            <h3><?= $article->getTitle() ?></h3>
-            <br>
-            <img class="picture" src="public/img/<?= $article->getImg() ?>">
-            <p class="content"><?= $article->getContent() ?></p>
-        </div>
+<?php
+foreach ($myArticles as $article) {
+    $date = new DateTime($article->getDate());
+    $datenew = $date->format("d/m/Y à H:i");
+?>
+
+    <div class="heightArticle">
+        <h3><?= $article->getTitle() ?></h3>
         <br>
-        <div class="blocNext">
-            <span class="dateAuthor">Posté le <?= $datenew ?> par : <?= $article->getAuthor() ?></span>
-            <a href="index.php?action=fullArticle&id=<?= $article->getId() ?>">Lire la suite</a>
-        </div>
-        <hr>
-    <?php } ?>
-</div>
+        <img class="picture" src="public/img/<?= $article->getImg() ?>">
+        <p class="content"><?= $article->getContent() ?></p>
+    </div>
+    <br>
+    <div class="blocNext">
+        <span class="dateAuthor">Posté le <?= $datenew ?> par : <?= $article->getAuthor() ?></span>
+        <a href="index.php?action=fullArticle&id=<?= $article->getId() ?>">Lire la suite</a>
+    </div>
+    <hr>
+<?php } ?>
+
 
 <?php $content = ob_get_clean();
-                                                                require 'view/template.php'; ?>
+                                                            require 'view/template.php'; ?>
