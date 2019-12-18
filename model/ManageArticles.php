@@ -27,9 +27,10 @@
             $query = "SELECT * FROM articles WHERE id = :idArticle";
             $result = $this->Connect()->prepare($query);
             $result->execute(["idArticle" => $id]);
-            $show = $result->fetch();
-            $article = new Article($show);
-            return $article;
+            if ($show = $result->fetch()) {
+                $article = new Article($show);
+                return $article;
+            }
         }
     }
     ?> 

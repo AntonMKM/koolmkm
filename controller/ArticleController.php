@@ -31,9 +31,13 @@ class ArticleController
     {
         $gestion = new ManageArticles();
         $myArticle = $gestion->oneFullArticle($id);
-        $gestion = new ManageComments();
-        $myComments = $gestion->getAllComments($id);
-        require 'view/fullArticle.php';
+        if ($myArticle = $gestion->oneFullArticle($id)) {
+            $gestion = new ManageComments();
+            $myComments = $gestion->getAllComments($id);
+            require 'view/fullArticle.php';
+        } else {
+            require 'view/error.php';
+        }
     }
     function sendComment()
     {
