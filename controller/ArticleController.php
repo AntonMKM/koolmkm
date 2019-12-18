@@ -25,7 +25,6 @@ class ArticleController
                 }
             }
         }
-
         header("location: index.php?action=accueil");
     }
     function getFullArticle($id)

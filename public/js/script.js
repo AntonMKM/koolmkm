@@ -1,5 +1,5 @@
 function confirmation(id) {
-  var conf = confirm("êtes vous sûr de vouloir supprimer ces données ?");
+  var conf = confirm("Etes vous sûr de vouloir supprimer ces données ?");
   if (conf == true) {
     document.location.replace("index.php?action=delete&id=" + id);
   }

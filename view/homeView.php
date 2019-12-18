@@ -7,9 +7,9 @@ $title = "KoolMKM";
 <?php if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') : ?>
     <h3>Ajouter un article</h3>
     <form action="index.php?action=sendArticle" method="post" enctype="multipart/form-data">
-        <input id="title" type="text" name="title" placeholder="Titre de l'article">
+        <input type="text" name="title" placeholder="Titre de l'article">
         <br><br>
-        <textarea name="content" id="content" rows="5" placeholder="Texte de l'article"></textarea>
+        <textarea name="content" rows="5" placeholder="Texte de l'article"></textarea>
         <br><br>
         <input type="file" name="img" id="img" accept=".png, .jpg, .jpeg" class="btn btn-orange" hidden>
         <label for="img" class="browse">Choisir illustration</label>

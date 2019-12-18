@@ -3,9 +3,7 @@ if (isset($_SESSION['id'])) {
 	header('location:index.php');
 }
 $title = 'Connexion';
-
 ob_start(); ?>
-
 
 <div class="container">
 	<h1>Se connecter</h1>

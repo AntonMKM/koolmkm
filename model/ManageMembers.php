@@ -2,8 +2,6 @@
 
 class ManageMembers extends DbConnect
 {
-
-
     function manageInscription(Member $data)
     {
         $pdo = $this->Connect();
@@ -24,7 +22,6 @@ class ManageMembers extends DbConnect
         $view->execute();
         return $view;
     }
-
     function manageDelete($id)
     {
         $pdo = $this->Connect();
@@ -32,7 +29,6 @@ class ManageMembers extends DbConnect
         $delete = $pdo->prepare($request);
         $delete->execute();
     }
-
     function manageUpdate(Member $member)
     {
         $pdo = $this->Connect();
@@ -41,12 +37,10 @@ class ManageMembers extends DbConnect
         $update = $pdo->prepare($request);
         $update->execute([
             'login' => $member->getLogin(),
-            // 'pass' => password_hash($member->getPass(), PASSWORD_DEFAULT),
             'email' => $member->getEmail(),
             'status' => $member->getStatus()
         ]);
     }
-
     function manageConnect(array $data)
     {
         $pdo = $this->Connect();

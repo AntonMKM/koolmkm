@@ -2,8 +2,6 @@ body {
   height: 100%;
   font-size: large;
   color: burlywood;
-  margin-left: 20%;
-  margin-right: 20%;
   background-image: url(../img/fond.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -13,7 +11,6 @@ body {
 #banner {
   background-image: url(../img/banner.png);
   height: 268px;
-  width: fit-content;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -30,9 +27,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.blocNext a,
-.blocNext span {
-  /* display: inline-block; */
+.blocNext a {
   color: #deb887;
 }
 .card {
@@ -46,19 +41,14 @@ body {
 }
 h3 {
   font-weight: bold;
+  font-size: 200%;
 }
 .heightArticle {
   overflow: hidden;
-  text-overflow: ellipsis;
   height: 300px;
 }
-#introStory {
-  float: left;
-  margin-right: 15px;
-}
-nav {
-  position: absolute;
-  bottom: 5px;
+hr {
+  background-color: #deb887;
 }
 .picture {
   margin-right: 15px;
@@ -66,21 +56,13 @@ nav {
   width: 30%;
 }
 .picture2 {
-  display: flex;
   float: left;
   margin-right: 15px;
   width: 50%;
 }
-h3 {
-  font-size: 200%;
-}
-hr {
-  background-color: #deb887;
-}
 .title {
   font-size: x-large;
 }
-
 table {
   opacity: 75%;
 }
@@ -91,7 +73,6 @@ textarea {
   overflow: hidden;
   background-color: #333;
 }
-
 .topnav a {
   float: left;
   display: block;
@@ -101,21 +82,18 @@ textarea {
   text-decoration: none;
   font-size: 17px;
 }
-
 .topnav a:hover {
   background-color: #f5a106;
   color: black;
 }
-
 .topnav a.active {
   background-color: #593195;
   color: white;
 }
-
 .topnav .icon {
   display: none;
 }
-
+/*Media queries*/
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
@@ -125,7 +103,6 @@ textarea {
     display: block;
   }
 }
-
 @media screen and (max-width: 600px) {
   .topnav.responsive {
     position: relative;
@@ -156,7 +133,4 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-}
-.footer {
-  background-color: #333;
 }

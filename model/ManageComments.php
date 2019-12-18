@@ -21,6 +21,6 @@ class ManageComments extends DbConnect
         $comment->setLogin($_SESSION['login']);
         $query = "INSERT INTO comments(id_article, login, comment) VALUES(:id_article, :login, :comment)";
         $result = $this->Connect()->prepare($query);
-        $result->execute(array("id_article" => $comment->getId_article(), "login" => $comment->getLogin(), "comment" => htmlspecialchars($comment->getComment())));
+        $result->execute(["id_article" => $comment->getId_article(), "login" => $comment->getLogin(), "comment" => htmlspecialchars($comment->getComment())]);
     }
 }

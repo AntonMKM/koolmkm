@@ -4,6 +4,7 @@ $title = "News"; ?>
 <!-- Affichage article entier -->
 <div id="article">
         <h3> <?= $myArticle->getTitle() ?> </h3>
+        <br>
         <img class="picture2" src="public/img/<?= $myArticle->getImg() ?>">
         <p> <?= $myArticle->getContent() ?> </p>
         <?php $date = new DateTime($myArticle->getDate());

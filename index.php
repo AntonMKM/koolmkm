@@ -14,7 +14,6 @@ spl_autoload_register(function ($class) {
 $memberController = new MembersController();
 $articleController = new ArticleController();
 
-
 if (!empty($_GET)) {
     extract($_GET);
     if (isset($action)) {

@@ -20,7 +20,7 @@
             $article->setAuthor($_SESSION['login']);
             $query = "INSERT INTO articles(title, content, author, img) VALUES(:title, :content, :author, :img)";
             $result = $this->Connect()->prepare($query);
-            $result->execute(array("title" => htmlspecialchars($article->getTitle()), "content" => htmlspecialchars($article->getContent()), "author" => $article->getAuthor(), "img" => $article->getImg()));
+            $result->execute(["title" => htmlspecialchars($article->getTitle()), "content" => htmlspecialchars($article->getContent()), "author" => $article->getAuthor(), "img" => $article->getImg()]);
         }
         public function oneFullArticle($id)
         {

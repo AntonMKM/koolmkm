@@ -4,8 +4,7 @@ ob_start();
 ?>
 
 <div class="form">
-    <form action="index.php?action=inscription" method="post" enctype="multipart/form-data">
-
+    <form action="index.php?action=inscription" method="post">
         <label for="pseudo">Pseudo</label>
         <br>
         <input type="text" name="login" required>
@@ -20,7 +19,6 @@ ob_start();
         <br>
         <br><br>
         <input type="submit" name="inscription" value="Inscription" class="button">
-
     </form>
 </div>
 
