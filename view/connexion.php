@@ -16,11 +16,8 @@ ob_start(); ?>
 		<input type="submit" value="Se connecter" class="button">
 	</form>
 </div>
-<?php if (isset($erreur)) {
-	echo $erreur;
-}
-?>
 
 <?php
 $content = ob_get_clean();
 require 'template.php';
+?>

@@ -30,21 +30,6 @@ if (!empty($_GET)) {
             case 'sendComment':
                 $articleController->sendComment();
                 break;
-            case 'story':
-                require 'view/story.php';
-                break;
-            case 'races':
-                require 'view/races.php';
-                break;
-            case 'connexion':
-                require 'view/connexion.php';
-                break;
-            case 'signin':
-                require 'view/inscription.php';
-                break;
-            case 'deconnexion':
-                $memberController->disconnect();
-                break;
             case 'manage':
                 $memberController->viewMembers();
                 break;
@@ -59,6 +44,21 @@ if (!empty($_GET)) {
                 break;
             case 'connecter':
                 $memberController->connexion();
+                break;
+            case 'story':
+                require 'view/story.php';
+                break;
+            case 'races':
+                require 'view/races.php';
+                break;
+            case 'connexion':
+                require 'view/connexion.php';
+                break;
+            case 'signin':
+                require 'view/inscription.php';
+                break;
+            case 'deconnexion':
+                $memberController->disconnect();
                 break;
             default:
                 require 'view/error.php';

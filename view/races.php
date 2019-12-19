@@ -25,7 +25,6 @@ ob_start();
     </div>
   </div>
   <div class="card col-md-3 offset-1">
-
     <img class=" card-img-top" src="public/img/races/elfe.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Elfe</h5>
@@ -37,7 +36,6 @@ ob_start();
 
 <h3 style="text-align: center"> Races jouables horde</h3>
 <br>
-
 <div class="container row">
   <div class="card col-md-3" style=" margin-left:6%">
     <img class="card-img-top" src="public/img/races/undead.jpg" alt="Card image cap">
@@ -66,6 +64,7 @@ ob_start();
     </div>
   </div>
 </div>
+<hr>
 
 <?php
 $content = ob_get_clean();

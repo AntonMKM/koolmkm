@@ -19,7 +19,6 @@ $title = "KoolMKM";
 <?php endif; ?>
 
 <!-- Affichage des articles -->
-
 <?php
 foreach ($myArticles as $article) {
     $date = new DateTime($article->getDate());
@@ -42,4 +41,4 @@ foreach ($myArticles as $article) {
 
 
 <?php $content = ob_get_clean();
-                                                            require 'view/template.php'; ?>
+require 'view/template.php'; ?>

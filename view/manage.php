@@ -6,7 +6,7 @@ if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') {
 ?>
     <h3>Gestion des membres </h3>
     <br>
-    <form id='formModif' method="POST" enctype="multipart/form-data">
+    <form id='formModif' method="POST">
         <table class="table table-dark">
             <thead>
                 <tr>
@@ -34,7 +34,7 @@ if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') {
         </table>
     </form>
 <?php
-                                                                                                                                                    }
-                                                                                                                                                    $content = ob_get_clean();
-                                                                                                                                                    require 'template.php';
+}
+$content = ob_get_clean();
+require 'template.php';
 ?>
